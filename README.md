@@ -1,4 +1,4 @@
-# gridsome-source-shopify
+# gridsome-source-shopify-xl
 
 > Shopify source plugin for Gridsome
 
@@ -16,12 +16,12 @@ This plugin supports the Storefront API's [`transformedSrc` image field](#transf
 ## Install
 yarn:
 ```bash
-yarn add gridsome-source-shopify
+yarn add gridsome-source-shopify-xl
 ```
 
 npm:
 ```bash
-npm install gridsome-source-shopify
+npm install gridsome-source-shopify-xl
 ```
 
 ## Usage
