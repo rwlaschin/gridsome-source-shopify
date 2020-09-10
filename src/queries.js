@@ -136,6 +136,7 @@ export const PRODUCTS_QUERY = `
                   amount
                   currencyCode
                 }
+                currentlyNotInStock
                 id
                 image {
                   altText
@@ -146,12 +147,18 @@ export const PRODUCTS_QUERY = `
                   amount
                   currencyCode
                 }
+                quantityAvailable
+                requiresShipping
                 selectedOptions {
                   name
                   value
                 }
                 sku
                 title
+                unitPrice {
+                  amount
+                  currencyCode
+                }
                 weight
                 weightUnit
               }
