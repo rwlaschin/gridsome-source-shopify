@@ -23,6 +23,8 @@ class ShopifySource {
     if (!options.storefrontToken) throw new Error('Missing storefront access token.')
     if (options.storeName) this.options.storeUrl = `https://${options.storeName}.myshopify.com`
 
+    this.options.graphUrl = `${this.options.storUrl}/api/2020-07/graphql.json`
+
     // Node Types
     this.TYPENAMES = {
       ARTICLE: this.createTypeName('Article'),
@@ -39,7 +41,7 @@ class ShopifySource {
     // Set included types
     this.typesToInclude = options.types.length ? options.types.map(type => this.createTypeName(type)) : Object.values(this.TYPENAMES)
 
-    this.shopify = createClient(options)
+    this.shopify = createClient(this.options)
 
     // Create custom schema type for ShopifyImage
     api.loadSource(actions => {

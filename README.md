@@ -31,7 +31,7 @@ npm install gridsome-source-shopify-xl
 module.exports = {
   plugins: [
     {
-      use: 'gridsome-source-shopify',
+      use: 'gridsome-source-shopifyi-xl',
       options: {
         storeName: <my-store> // OR
         storeUrl: 'https://<my-store>.myshopify.com',
